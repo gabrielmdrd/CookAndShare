@@ -7,6 +7,6 @@ import retrofit2.http.GET;
 
 public interface RestAPI
 {
-    @GET("/api/json/v1/1/search.php?s=/")
+    @GET("/api/vegetables/")
     Observable<List<Post>> getPosts();
 }

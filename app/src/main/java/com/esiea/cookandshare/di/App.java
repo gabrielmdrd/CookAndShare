@@ -13,7 +13,7 @@ public class App extends Application
 
         netComponent = DaggerNetComponent.builder()
                 .applicationModule(new ApplicationModule(this))
-                .netModule(new NetModule("https://www.thecocktaildb.com/"))
+                .netModule(new NetModule("http://51.38.32.199/"))
                 .build();
     }
 
