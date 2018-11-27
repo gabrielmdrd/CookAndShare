@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-        
+
         ((App) getApplication()).getNetComponent().injectMainActivity(this);
         Observable<List<Post>> call = retrofit.create(RestAPI.class).getPosts();
 

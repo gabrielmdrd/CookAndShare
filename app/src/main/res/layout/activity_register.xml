@@ -6,7 +6,7 @@
     android:background="@drawable/main_image">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="@string/login"/>
 
