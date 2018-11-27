@@ -8,5 +8,5 @@ import retrofit2.http.GET;
 public interface RestAPI
 {
     @GET("/api/vegetables/")
-    Observable<List<Post>> getPosts();
+    Observable<List<Ingredient>> getIngredients();
 }

@@ -111,25 +111,25 @@ public class NetModule
     }
 
     @NonNull
-    private X509TrustManager getNoOpTrustManager() {
+    private X509TrustManager getNoOpTrustManager()
+    {
         return new X509TrustManager()
         {
             @Override
-            public void checkClientTrusted(
-                    X509Certificate[] chain, String authType
-            ) throws CertificateException {
+            public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException
+            {
                 //no-op
             }
 
             @Override
-            public void checkServerTrusted(
-                    X509Certificate[] chain, String authType)
-                    throws CertificateException {
+            public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException
+            {
                 //no-op
             }
 
             @Override
-            public X509Certificate[] getAcceptedIssuers() {
+            public X509Certificate[] getAcceptedIssuers()
+            {
                 return new X509Certificate[]{};
             }
         };

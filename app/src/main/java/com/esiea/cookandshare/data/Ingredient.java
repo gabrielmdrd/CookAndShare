@@ -1,11 +1,21 @@
 package com.esiea.cookandshare.data;
 
-public class Post
+public class Ingredient
 {
     private String name;
     private String type;
     private String bestOrigin;
     private String taste;
+    private String image;
+
+    public Ingredient(String name, String type, String bestOrigin, String taste, String image)
+    {
+        this.name = name;
+        this.type = type;
+        this.bestOrigin = bestOrigin;
+        this.taste = taste;
+        this.image = image;
+    }
 
     public String getName()
     {
@@ -45,5 +55,15 @@ public class Post
     public void setTaste(String taste)
     {
         this.taste = taste;
+    }
+
+    public String getImage()
+    {
+        return image;
+    }
+
+    public void setImage(String image)
+    {
+        this.image = image;
     }
 }
