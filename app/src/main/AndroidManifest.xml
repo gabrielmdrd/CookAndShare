@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".presentation.HomeActivity"></activity>
+        <activity android:name=".presentation.HomeActivity" />
+        <activity android:name=".presentation.loginActivity" />
+        <activity android:name=".presentation.registerActivity"></activity>
     </application>
 
 </manifest>

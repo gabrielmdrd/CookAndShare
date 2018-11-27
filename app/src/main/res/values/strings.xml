@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CookAndShare</string>
+    <string name="connection">Sign In</string>
+    <string name="register">Sign up</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
 </resources>
