@@ -2,23 +2,12 @@ package com.esiea.cookandshare.presentation;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 
 import com.esiea.cookandshare.R;
-import com.esiea.cookandshare.data.Ingredient;
-import com.esiea.cookandshare.data.RestAPI;
-
-import java.util.List;
-
-import io.reactivex.Observable;
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 
 public class HomeActivity extends AppCompatActivity
 {
@@ -38,17 +27,17 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(new Intent(HomeActivity.this, RegisterActivity.class));
             }
         });
-
-        buttonSignIn = (Button) findViewById(R.id.button_sign_in);
-        buttonSignUp = (Button) findViewById(R.id.button_sign_in);
-
-        buttonSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
+        model.goToLoginActivity.observe(this, goTo -> {
+            if (goTo)
+            {
+                startActivity(new Intent(HomeActivity.this, LoginActivity.class));
             }
         });
 
+        buttonSignIn = (Button) findViewById(R.id.button_sign_in);
+        buttonSignUp = (Button) findViewById(R.id.button_sign_up);
+
+        buttonSignIn.setOnClickListener(v -> model.onClickedSignInBtn());
         buttonSignUp.setOnClickListener(v -> model.onClickedSignUpBtn());
     }
 }

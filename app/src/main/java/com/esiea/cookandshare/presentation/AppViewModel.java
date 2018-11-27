@@ -1,10 +1,8 @@
 package com.esiea.cookandshare.presentation;
 
-import android.app.Activity;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
-import android.content.Intent;
 import android.util.Log;
 
 import com.esiea.cookandshare.data.RestAPI;
@@ -27,7 +25,8 @@ public class AppViewModel extends ViewModel
     Retrofit retrofit;
 
     public MutableLiveData<List<Ingredient>> ingredientsList;
-    public MutableLiveData<Boolean> goToRegisterActivity;
+    public MutableLiveData<Boolean> goToRegisterActivity = new MutableLiveData<>();
+    public MutableLiveData<Boolean> goToLoginActivity = new MutableLiveData<>();
 
     public LiveData<List<Ingredient>> getIngredientsList()
     {
@@ -77,13 +76,16 @@ public class AppViewModel extends ViewModel
 
     public LiveData<Boolean> onClickedSignUpBtn()
     {
-        if (goToRegisterActivity == null)
-        {
-            goToRegisterActivity = new MutableLiveData<>();
-            goToRegisterActivity.setValue(true);
-        }
+        goToRegisterActivity.setValue(true);
 
         return goToRegisterActivity;
+    }
+
+    public LiveData<Boolean> onClickedSignInBtn()
+    {
+        goToLoginActivity.setValue(true);
+
+        return goToLoginActivity;
     }
 
     public void registerUser(String username, String password)
