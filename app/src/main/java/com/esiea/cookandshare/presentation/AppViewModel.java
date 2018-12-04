@@ -88,7 +88,7 @@ public class AppViewModel extends ViewModel
         return goToLoginActivity;
     }
 
-    public void registerUser(String username, String password)
+    public void registerUser(String username, String password, String email)
     {
 
     }

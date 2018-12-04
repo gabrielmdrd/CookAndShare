@@ -8,18 +8,21 @@
 
     <EditText
         style="@style/inputStyle"
+        android:id="@+id/editText_login_login"
         android:layout_marginTop="170dp"
-        android:hint="@string/login"/>
+        android:hint="@string/login"
+    />
 
     <EditText
         style="@style/inputStyle"
+        android:id="@+id/editText_login_password"
         android:layout_marginTop="30dp"
         android:inputType="textPassword"
-        android:hint="@string/password"/>
-
-
+        android:hint="@string/password"
+    />
 
     <Button
+        android:id="@+id/button_login_signIn"
         android:layout_width="220dp"
         android:layout_height="60dp"
         android:background="@drawable/btn_rounded"
@@ -29,6 +32,7 @@
         android:textStyle="bold"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+    />
 
 </LinearLayout>

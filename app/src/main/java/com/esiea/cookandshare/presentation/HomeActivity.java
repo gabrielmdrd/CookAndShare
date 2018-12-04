@@ -34,8 +34,8 @@ public class HomeActivity extends AppCompatActivity
             }
         });
 
-        buttonSignIn = (Button) findViewById(R.id.button_sign_in);
-        buttonSignUp = (Button) findViewById(R.id.button_sign_up);
+        buttonSignIn = (Button) findViewById(R.id.button_home_signIn);
+        buttonSignUp = (Button) findViewById(R.id.button_home_signUp);
 
         buttonSignIn.setOnClickListener(v -> model.onClickedSignInBtn());
         buttonSignUp.setOnClickListener(v -> model.onClickedSignUpBtn());

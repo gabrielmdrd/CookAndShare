@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">CookAndShare</string>
     <string name="connection">Connexion</string>
-    <string name="register">Inscription</string>
-    <string name="login">Identifiant</string>
+    <string name="register">S\'enregistrer</string>
+    <string name="login">Nom d\'utilisateur</string>
     <string name="password">Mot de passe</string>
+    <string name="confirmPassword">Confirmer Mot de passe</string>
+    <string name="email">E-mail</string>
 </resources>

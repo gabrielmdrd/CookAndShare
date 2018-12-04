@@ -6,22 +6,61 @@
     android:background="@drawable/bg_transparent">
 
     <TextView
-       style="@style/inputStyle"
-        android:text="@string/login"/>
+        style="@style/inputStyle"
+        android:id="@+id/textView_register_username"
+        android:text="@string/login"
+    />
 
     <EditText
-        style="@style/inputStyle" />
+        style="@style/inputStyle"
+        android:id="@+id/editText_register_username"
+    />
 
     <TextView
         style="@style/inputStyle"
-        android:text="@string/password"/>
+        android:id="@+id/textView_register_email"
+        android:text="@string/email"
+    />
 
     <EditText
-        style="@style/inputStyle" />
+        style="@style/inputStyle"
+        android:id="@+id/editText_register_email"
+    />
 
     <TextView
         style="@style/inputStyle"
-        android:text="@string/password"/>
+        android:text="@string/password"
+        android:id="@+id/textView_register_password"
+    />
 
+    <EditText
+        style="@style/inputStyle"
+        android:id="@+id/editText_register_password"
+    />
+
+    <TextView
+        style="@style/inputStyle"
+        android:text="@string/confirmPassword"
+        android:id="@+id/textView_register_confirmPassword"
+    />
+
+    <EditText
+        style="@style/inputStyle"
+        android:id="@+id/editText_register_confirmPassword"
+    />
+
+    <Button
+        android:id="@+id/button_register_register"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_rounded"
+        android:text="@string/register"
+        android:fontFamily="casual"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="#ffffff"
+    />
 
 </LinearLayout>
