@@ -3,6 +3,8 @@ package com.esiea.cookandshare.presentation;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
+import android.arch.lifecycle.ViewModelProviders;
+import android.text.BoringLayout;
 import android.util.Log;
 
 import com.esiea.cookandshare.data.RestAPI;
@@ -74,6 +76,13 @@ public class AppViewModel extends ViewModel
                 .subscribe(observer);
     }
 
+    public void registerUser(String username, String password, String email)
+    {
+        String urlSuffix = "?username=" + username + "&password=" + password + "&email=" + email;
+    }
+
+
+
     public LiveData<Boolean> onClickedSignUpBtn()
     {
         goToRegisterActivity.setValue(true);
@@ -88,8 +97,4 @@ public class AppViewModel extends ViewModel
         return goToLoginActivity;
     }
 
-    public void registerUser(String username, String password, String email)
-    {
-
-    }
 }

@@ -5,6 +5,13 @@
     android:orientation="vertical"
     android:background="@drawable/bg_transparent">
 
+    <data>
+        <variable
+            android:name="loginViewModel"
+            android:type="com.esiea.cookandshare.presentation.models.LoginViewModel"
+        />
+    </data>
+
     <TextView
         style="@style/inputStyle"
         android:id="@+id/textView_register_username"
@@ -25,6 +32,8 @@
     <EditText
         style="@style/inputStyle"
         android:id="@+id/editText_register_email"
+        android:inputType="textEmailAddress"
+        android:text="@={loginViewModel.email}"
     />
 
     <TextView

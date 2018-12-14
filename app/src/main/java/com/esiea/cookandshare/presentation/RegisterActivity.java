@@ -1,5 +1,6 @@
 package com.esiea.cookandshare.presentation;
 
+import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModelProviders;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,9 @@ public class RegisterActivity extends AppCompatActivity
     private EditText editTextPassword;
     private EditText editTextConfirmPassword;
 
+    public MutableLiveData<String> passwordToWatch = new MutableLiveData<>();
+    public MutableLiveData<String> confirmPasswordToWatch = new MutableLiveData<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -29,5 +33,14 @@ public class RegisterActivity extends AppCompatActivity
         editTextEmail = (EditText)findViewById(R.id.editText_register_email);
         editTextPassword = (EditText)findViewById(R.id.editText_register_password);
         editTextConfirmPassword = (EditText)findViewById(R.id.editText_register_confirmPassword);
+
+        passwordToWatch.setValue(editTextPassword.getText().toString());
+        confirmPasswordToWatch.setValue(editTextConfirmPassword.getText().toString());
+
+        buttonSignUp.setOnClickListener(v -> model.registerUser(
+                editTextUsername.getText().toString(),
+                editTextPassword.getText().toString(),
+                editTextEmail.getText().toString()
+        ));
     }
 }
