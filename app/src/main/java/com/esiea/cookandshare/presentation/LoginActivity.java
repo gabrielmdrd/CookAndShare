@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.esiea.cookandshare.R;
+import com.esiea.cookandshare.presentation.model.AppViewModel;
 
 public class LoginActivity extends AppCompatActivity
 {
@@ -26,5 +27,9 @@ public class LoginActivity extends AppCompatActivity
         buttonSignIn = (Button)findViewById(R.id.button_login_signIn);
         editTextLogin = (EditText)findViewById(R.id.editText_login_login);
         editTextPassword = (EditText)findViewById(R.id.editText_login_password);
+
+        buttonSignIn.setOnClickListener(v -> model.onClickAuthenticate(editTextLogin.getText().toString(), editTextPassword.getText().toString(), this));
     }
+
+
 }

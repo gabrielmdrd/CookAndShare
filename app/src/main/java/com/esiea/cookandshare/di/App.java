@@ -1,6 +1,9 @@
 package com.esiea.cookandshare.di;
 
 import android.app.Application;
+import android.databinding.DataBindingUtil;
+
+import com.esiea.cookandshare.databinding.AppDataBindingComponent;
 
 public class App extends Application
 {
@@ -10,6 +13,7 @@ public class App extends Application
     public void onCreate()
     {
         super.onCreate();
+        DataBindingUtil.setDefaultComponent(new AppDataBindingComponent());
 
         netComponent = DaggerNetComponent.builder()
                 .applicationModule(new ApplicationModule(this))

@@ -2,12 +2,12 @@ package com.esiea.cookandshare.presentation;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 
 import com.esiea.cookandshare.R;
+import com.esiea.cookandshare.presentation.model.AppViewModel;
 
 public class HomeActivity extends AppCompatActivity
 {

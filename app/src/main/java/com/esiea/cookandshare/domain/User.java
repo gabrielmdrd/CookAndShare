@@ -4,21 +4,29 @@ import android.util.Patterns;
 
 public class User
 {
+    public String uUsername;
     public String uEmail;
     public String uPassword;
 
-    public User(String uEmail, String uPassword)
+    public User(String username, String email, String password)
     {
-        this.uEmail = uEmail;
-        this.uPassword = uPassword;
+        this.uUsername = username;
+        this.uEmail = email;
+        this.uPassword = password;
+    }
+
+    public String getUsername()
+    {
+        return uUsername;
+    }
+
+    public void setUsername(String uUsername)
+    {
+        this.uUsername = uUsername;
     }
 
     public String getEmail()
     {
-        if (uEmail == null)
-        {
-            return "";
-        }
         return uEmail;
     }
 
@@ -29,10 +37,6 @@ public class User
 
     public String getPassword()
     {
-        if (uPassword == null)
-        {
-            return "";
-        }
         return uPassword;
     }
 
