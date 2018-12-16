@@ -27,3 +27,4 @@ Cook &amp; Share Project made by Gabriel MANDRAUD, Mohand ABDELOUHAB and Klyve C
 
 - Username : proton
 - Password : test123
+- Now, it is possible to create an account via the registration page
