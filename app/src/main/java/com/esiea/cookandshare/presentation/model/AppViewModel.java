@@ -15,9 +15,11 @@ public class AppViewModel extends ViewModel
     public MutableLiveData<Boolean> unlockRegisterButton = new MutableLiveData<>();
     public MutableLiveData<Boolean> isAuthentificated = new MutableLiveData<>();
 
-    public void registerUser(String username, String password, String email)
+    public void registerUser(String username, String password, String email, Context context)
     {
-        String urlSuffix = "?username=" + username + "&password=" + password + "&email=" + email;
+        String type = "register";
+        AuthenticationHandler authenticationHandler = new AuthenticationHandler(context);
+        authenticationHandler.execute(type, username, email, password);
     }
 
     public LiveData<Boolean> onClickAuthenticate(String username, String password, Context context)

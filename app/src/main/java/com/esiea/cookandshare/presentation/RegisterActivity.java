@@ -55,7 +55,8 @@ public class RegisterActivity extends AppCompatActivity
         buttonSignUp.setOnClickListener(v -> model.registerUser(
                 editTextUsername.getText().toString(),
                 editTextPassword.getText().toString(),
-                editTextEmail.getText().toString()
+                editTextEmail.getText().toString(),
+                this
         ));
 
         editTextConfirmPassword.addTextChangedListener(new TextWatcher()

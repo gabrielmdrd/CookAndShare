@@ -24,10 +24,11 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        View view = bind();
-        initRecyclerView(view);
 
         ((App) getApplication()).getNetComponent().injectMainActivity(this);
+
+        View view = bind();
+        initRecyclerView(view);
     }
 
     @Override
